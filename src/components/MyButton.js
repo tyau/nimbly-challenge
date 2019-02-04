@@ -14,13 +14,14 @@ class MyButton extends Component{
 
   render(){
     return (
-      <button onClick={() => this.handleClick()}>Get my robot avatar!</button>
+      <button onClick={() => this.handleClick()}>{this.props.buttonText}</button>
     );
   }
 }
 
 MyButton.propTypes = {
-  handleButtonClick: PropTypes.func.isRequired
+  handleButtonClick: PropTypes.func.isRequired,
+  buttonText: PropTypes.string
 };
 
 export default MyButton;

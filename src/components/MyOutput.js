@@ -9,7 +9,7 @@ class MyOutput extends Component{
     if(this.props.outputVal.length <= 0){
       img = <div className="img-placeholder"></div>;
     } else {
-      img = <img src={this.props.outputVal} />;
+      img = <img src={this.props.outputVal} title={this.props.outputVal} />;
     }
 
     return (

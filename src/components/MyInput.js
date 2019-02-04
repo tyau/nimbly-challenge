@@ -12,16 +12,22 @@ class MyInput extends Component{
     this.props.handleInputChange(e.target.value);
   };
 
-
   render(){
     return (
-      <input onChange={e => this.handleChange(e)}></input>
+      <input
+        onChange={e => this.handleChange(e)}
+        placeholder={this.props.placeholderText}
+        value={this.props.defaultValue}
+      >
+      </input>
     );
   }
 }
 
 MyInput.propTypes = {
-  handleInputChange: PropTypes.func.isRequired
+  handleInputChange: PropTypes.func.isRequired,
+  placeholderText: PropTypes.string,
+  defaultValue: PropTypes.string
 };
 
 export default MyInput;
