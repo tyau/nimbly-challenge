@@ -14,7 +14,7 @@ class MyButton extends Component{
 
   render(){
     return (
-      <button onClick={() => this.handleClick()}>My Button</button>
+      <button onClick={() => this.handleClick()}>Get my robot avatar!</button>
     );
   }
 }

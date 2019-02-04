@@ -28,6 +28,8 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
+        <h1>Get your very own robot avatar!</h1>
+        <div>
           <MyInput 
             handleInputChange={this.handleInputChange}
           />
@@ -35,8 +37,10 @@ class App extends Component {
             handleButtonClick={this.handleButtonClick}
           />
           <MyOutput
+            inputVal={inputVal}
             outputVal={outputVal}
           />
+        </div>
         </header>
       </div>
     );
