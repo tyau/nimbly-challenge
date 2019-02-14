@@ -14,9 +14,16 @@ class App extends Component {
     outputVal: ''
   };
 
+  sanitizeRobohashUrl = () => {
+    //due to the nature of the API, we cannot have leading '?'
+    //since everything after the '?' would be seen as parameters and not inputs
+    return this.state.inputVal.replace(/^\?+/,'').trim();
+  }
+
   handleButtonClick = () => {
-    if(this.state.inputVal.length > 0){
-      this.setState({outputVal: `https://www.robohash.org/${this.state.inputVal}` });
+    let sanitizedInput = this.sanitizeRobohashUrl();
+    if(sanitizedInput.length > 0){
+      this.setState({outputVal: `https://www.robohash.org/${sanitizedInput}`});
     }
   }
 
